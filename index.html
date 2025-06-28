@@ -18,38 +18,34 @@
 </head>
 
 <body>
-
   <main>
     <section class="hero">
-      <header>
-        <nav>
-          <a href="#"><img src="images/logo.svg" alt=""></a>
+      <div class="container">
+        <header>
+          <nav>
+            <a href="#"><img src="images/logo.svg" alt=""></a>
+            <ul>
+              <li><a href="#about-us">ABOUT US</a></li>
+              <li><a href="#projects">PROJECTS</a></li>
+              <li><a href="#news">NEWS</a></li>
+              <li><a href="#contact">CONTACT</a></li>
+            </ul>
+            <div>
+              <button>
+                <a href=""><img src="images/f.svg" alt=""></a>
+              </button>
+              <button>
+                <a href=""><img src="images/twitter.svg" alt=""></a>
+              </button>
+              <button>
+                <a href=""><img src="images/inst.svg" alt=""></a>
+              </button>
+            </div>
+          </nav>
+        </header>
+      </div>
 
-          <ul>
-            <li><a href="#about-us">ABOUT US</a></li>
-
-            <li><a href="#projects">PROJECTS</a></li>
-
-            <li><a href="#news">NEWS</a></li>
-
-            <li><a href="#contact">CONTACT</a></li>
-          </ul>
-
-          <div>
-            <button>
-              <a href=""><img src="images/f.svg" alt=""></a>
-            </button>
-
-            <button>
-              <a href=""><img src="images/twitter.svg" alt=""></a>
-            </button>
-
-            <button>
-              <a href=""><img src="images/inst.svg" alt=""></a>
-            </button>
-          </div>
-        </nav>
-      </header>
+      <img class="bg-hero" src="images/bg-hero.png" alt="">
 
       <h1>SIMPLE & MODERN</h1>
 
@@ -59,45 +55,46 @@
     </section>
 
     <section class="about-us" id="about-us">
-      <hr>
+      <div class="container">
+        <hr>
 
-      <h2>WHAT WE DO</h2>
+        <h2>WHAT WE DO</h2>
 
-      <div class="card-1">
-        <div>
-          <div class="image">
+        <div class="card-1">
+          <picture>
+            <img src="images/trade-center.png" alt="">
+          </picture>
+
+          <div class="text">
+            <span>ONE WORLD</span>
+            <h3>TRADE CENTER</h3>
+            <p>
+              Increasing prosperity in our lives can be accomplished by having the right frame of mind. The truth is,
+              our
+              thoughts
+              are very powerful.
+            </p>
+            <button>MORE DETAILS</button>
+            <a href="">New York City, United States - 1776 feet</a>
           </div>
-          <img src="images/trade-center.png" alt="">
         </div>
 
-        <div class="text">
-          <span>ONE WORLD</span>
-          <h3>TRADE CENTER</h3>
-          <p>
-            Increasing prosperity in our lives can be accomplished by having the right frame of mind. The truth is, our
-            thoughts
-            are very powerful.
-          </p>
-          <button>MORE DETAILS</button>
-          <a href="">New York City, United States - 1776 feet</a>
-        </div>
-      </div>
+        <div class="card-2">
+          <div class="text">
+            <span>INTERNATIONAL</span>
+            <h3>COMMERCE CENTRE</h3>
+            <p>
+              Successful businesses have many things in common, today we’ll look at the big ‘R’ of recognition and how a
+              digital
+              advertising network may help.
+            </p>
+            <button>MORE DETAILS</button>
+            <a href="">Hong Kong - 1588 feet</a>
+          </div>
 
-      <div class="card-2">
-        <div class="text">
-          <span>INTERNATIONAL</span>
-          <h3>COMMERCE CENTRE</h3>
-          <p>
-            Successful businesses have many things in common, today we’ll look at the big ‘R’ of recognition and how a
-            digital
-            advertising network may help.
-          </p>
-          <button>MORE DETAILS</button>
-          <a href="">Hong Kong - 1588 feet</a>
-        </div>
-
-        <div class="image">
-          <img src="images/commerce-center.png" alt="">
+          <div class="image-2">
+            <img src="images/commerce-center.png" alt="">
+          </div>
         </div>
       </div>
     </section>
@@ -106,6 +103,8 @@
       <hr>
 
       <h2>LATEST NEWS</h2>
+
+      <img class="bg-news" src="images/bg-news.png" alt="">
 
       <div class="carousel-container">
         <div class="carousel-content">
@@ -306,34 +305,43 @@
     </section>
 
     <section class="contact" id="contact">
-      GET IN TOUCH
-      91 Nolan Extensions Suite 670
-      +001 356-868-2454
-      montichello@service.com
-      From 07:05AM to 19:30PM
-      Mollie Medina
-      Email
-      SUBMIT
+      <h2>GET IN TOUCH</h2>
+
+      <div class="modal">
+        <ul>
+          <li>91 Nolan Extensions Suite 670</li>
+          <li>+001 356-868-2454</li>
+          <li>montichello@service.com</li>
+          <li>From 07:05AM to 19:30PM</li>
+        </ul>
+
+        <form action="">
+          <input type="text">Mollie Medina</input>
+          <input type="text">Email</input>
+          <button>SUBMIT</button>
+        </form>
+      </div>
     </section>
   </main>
 
   <footer>
     <div>
       <img src="images/logo.svg" alt="">
+
       <ul>
         <li>
           <button>
-            <a href=""></a>
+            <a href=""><img src="images/f.svg" alt=""></a>
           </button>
         </li>
         <li>
           <button>
-            <a href=""></a>
+            <a href=""><img src="images/twitter.svg" alt=""></a>
           </button>
         </li>
         <li>
           <button>
-            <a href=""></a>
+            <a href=""><img src="images/inst.svg" alt=""></a>
           </button>
         </li>
       </ul>
