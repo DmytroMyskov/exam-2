@@ -1,4 +1,4 @@
-/* html {
+html {
   scroll-behavior: smooth;
 }
 
@@ -130,7 +130,7 @@ body {
     }
   }
 
-  .about-us {
+  /* .about-us {
     position: relative;
 
     hr {
