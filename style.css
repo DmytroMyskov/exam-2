@@ -65,6 +65,8 @@ body {
 
     header {
       padding-top: 53px;
+      position: relative;
+      z-index: 2;
 
       nav {
         display: flex;
@@ -76,6 +78,18 @@ body {
           gap: 70px;
 
           li {
+            border: 1px solid transparent;
+            padding: 2px;
+            transition: 0.5s;
+            display: flex;
+            align-items: center;
+            cursor: pointer;
+
+            &:hover {
+              border-bottom: 1px solid var(--third-color);
+              transform: scale(1.1);
+            }
+
             a {
               font-family: var(--third-font);
               font-weight: 400;
@@ -100,6 +114,12 @@ body {
             border-radius: 25px;
             cursor: pointer;
             justify-content: center;
+            transition: 0.5s;
+
+            &:hover {
+              background-color: rgba(255, 255, 255, 0.2);
+              transform: scale(1.1);
+            }
 
             img {
               display: block;
@@ -140,6 +160,13 @@ body {
       left: 50%;
       transform: translateX(-50%);
       bottom: 50px;
+      transition: 0.5s;
+      cursor: pointer;
+      z-index: 2;
+
+      &:hover {
+        background-color: rgba(255, 255, 255, 0.2);
+      }
     }
   }
 
@@ -213,7 +240,6 @@ body {
 
   .news {
     background: linear-gradient(213deg, #24ccfa 0%, #3c7fd4 100%);
-    height: 978px;
     position: relative;
 
     .bg-news {
@@ -226,13 +252,9 @@ body {
     }
 
     hr {
-      /* margin-top: 120px; */
       color: var(--third-color);
       width: 100px;
       border: 1px solid var(--third-color);
-      /* position: absolute;
-      left: 50%;
-      transform: translateX(-50%); */
     }
 
     h2 {
@@ -287,6 +309,13 @@ body {
           display: flex;
           flex-direction: column;
           align-items: flex-start;
+          transition: 0.5s;
+          cursor: pointer;
+
+          &:hover {
+            transform: scale(1.1);
+            box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
+          }
 
           h4 {
             font-weight: 700;
@@ -348,6 +377,7 @@ body {
       z-index: 10;
       width: 40px;
       height: 40px;
+      transition: 0.5s;
     }
 
     .prev-button {
@@ -360,7 +390,7 @@ body {
 
     .prev-button:hover,
     .next-button:hover {
-      background-color: rgba(0, 0, 0, 0.8);
+      background-color: rgba(255, 255, 255, 0.2);
     }
 
     .carousel-indicators {
@@ -369,7 +399,7 @@ body {
       align-items: center;
       gap: 40px;
       position: absolute;
-      bottom: 20px;
+      bottom: 100px;
       width: 100%;
       z-index: 15;
     }
@@ -399,11 +429,20 @@ body {
   .gallery {
     padding: 150px 215px;
 
-    hr {
-      color: var(--primary-color);
-      width: 100px;
-      border: 1px solid var(--primary-color);
+    div {
+      hr {
+        color: var(--primary-color);
+        width: 100px;
+        border: 1px solid var(--primary-color);
+      }
 
+      hr:nth-child(1) {
+        border: 1px solid var(--third-color);
+      }
+
+      hr:nth-child(3) {
+        border: 1px solid var(--third-color);
+      }
     }
 
     h2 {
@@ -504,17 +543,24 @@ body {
   }
 
   footer {
-    background-image: url(images/bg-footer.png);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
+    position: relative;
     background: linear-gradient(207deg, #7e5aff 0%, #55b7ff 100%);
     padding: 200px 415px;
+
+    .bg-footer {
+      position: absolute;
+      top: 0;
+      z-index: 1;
+      width: 100%;
+      height: 60vh;
+    }
 
     div {
       display: flex;
       align-items: center;
       justify-content: space-between;
+      position: relative;
+      z-index: 2;
 
       ul {
         display: flex;
@@ -531,16 +577,27 @@ body {
           border-radius: 25px;
           cursor: pointer;
           justify-content: center;
+          transition: 0.5s;
+
+          &:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+            transform: scale(1.1);
+          }
+
+          img {
+            display: block;
+          }
+        }
+
+        p {
+          margin-top: 40px;
+          font-family: var(--first-font);
+          font-weight: 400;
+          font-size: 14px;
+          color: var(--third-color);
+          z-index: 2;
         }
       }
-    }
-
-    p {
-      margin-top: 40px;
-      font-family: var(--first-font);
-      font-weight: 400;
-      font-size: 14px;
-      color: var(--third-color);
     }
   }
 }
