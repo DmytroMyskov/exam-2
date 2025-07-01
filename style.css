@@ -444,37 +444,33 @@ body {
     .modal {
       display: flex;
       flex-direction: column;
-      justify-content: space-around;
+      justify-content: space-between;
       box-sizing: border-box;
       width: 770px;
       height: 450px;
-      border: 1px solid var(--primary-color);
-      box-shadow: 0 10px 40px rgba(0.15, 0.15, 0.15, 0.15);
+      box-shadow: 0 10px 40px rgba(0.2, 0.15, 0.15, 0.15);
       padding: 60px;
 
       .form {
         display: flex;
         margin: 0;
+        justify-content: space-between;
       }
 
       ul {
-        display: flex;
-        flex-direction: column;
-        gap: 20px;
+        padding: 0;
+        margin: 0;
 
         li {
-          display: flex;
-          gap: 5px;
-          align-items: baseline;
+          font-weight: 400;
+          font-size: 18px;
+          color: var(--secondary-color);
+          line-height: 1.8em;
+          margin-bottom: 18px;
+          position: relative;
 
           svg {
             height: 15px;
-          }
-
-          span {
-            font-weight: 400;
-            font-size: 18px;
-            color: var(--secondary-color);
           }
         }
       }
@@ -489,15 +485,25 @@ body {
           gap: 10px;
         }
 
-        input,
-        textarea {
-          width: 100%;
-          padding: 10px;
-          border: 1px solid #ccc;
-          border-radius: 5px;
+        input {
+          width: 310px;
+          border: none;
+          border-bottom: 1px solid #c7c7c7;
+          background-color: transparent;
+          padding: 10px 0;
+          font-family: var(--font-family);
+          font-size: 18px;
+          color: #2c4058;
+          transition: border-color 0.3s ease;
+
+          &:focus {
+            outline: none;
+            border-color: var(--primary-color);
+          }
         }
 
         button {
+          margin-right: initial;
           width: 150px;
           height: 50px;
           background-color: transparent;
