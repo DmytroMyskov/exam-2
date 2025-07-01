@@ -12,7 +12,7 @@ html {
 }
 
 * {
-  margin: 0;
+  margin: 0 auto;
   padding: 0;
   font-family: var(--first-font);
   color: var(--primary-color);
@@ -20,7 +20,6 @@ html {
 
 .container {
   max-width: 1170px;
-  margin: 0 auto;
 }
 
 p {
@@ -170,72 +169,23 @@ body {
     }
   }
 
-  .about-us {
-    position: relative;
+  .projects {
+    padding-block: 100px 150px;
 
+    .title {
+      text-align: center;
+      margin-bottom: 90px;
 
-    hr {
-      margin-top: 100px;
-      color: var(--primary-color);
-      width: 100px;
-      border: 1px solid var(--primary-color);
-      /* position: absolute;
-      left: 50%;
-      transform: translateX(-50%); */
-    }
-
-    h2 {
-      margin-block: 30px 90px;
-    }
-
-    .card-1,
-    .card-2 {
-      display: flex;
-      gap: 70px;
-      padding-inline: 215px;
-    }
-
-    .card-1 {
-      margin-bottom: 120px;
-      position: relative;
-
-
-      .image-1 {
-        background: #55b7ff;
-        width: 585px;
-        height: 470px;
-        z-index: -1;
-        top: 0;
-        left: 0;
-        position: absolute;
+      hr {
+        width: 100px;
+        height: 1px;
+        background-color: var(--primary-color);
+        border: none;
+        margin-bottom: 15px;
       }
 
-      img {
-        position: absolute;
-        top: 57px;
-        left: 215px;
-      }
+
     }
-
-    /* .card-2 {
-      position: relative;
-
-      .image-2 {
-        background: #7e5aff;
-        width: 585px;
-        height: 470px;
-        z-index: -1;
-        top: 0;
-        right: 0;
-        position: absolute;
-      }
-
-      img {
-        position: absolute;
-        top: 57px;
-        right: 215px;
-      }
-    } */
   }
 
   .news {
@@ -429,20 +379,12 @@ body {
   .gallery {
     padding: 150px 215px;
 
-    div {
-      hr {
-        color: var(--primary-color);
-        width: 100px;
-        border: 1px solid var(--primary-color);
-      }
-
-      hr:nth-child(1) {
-        border: 1px solid var(--third-color);
-      }
-
-      hr:nth-child(3) {
-        border: 1px solid var(--third-color);
-      }
+    hr {
+      background-color: var(--primary-color);
+      width: 100px;
+      height: 1px;
+      border: none;
+      margin-bottom: 15px;
     }
 
     h2 {
@@ -486,23 +428,55 @@ body {
   }
 
   .contact {
-    position: relative;
+    margin-bottom: 100px;
 
+    hr {
+      background-color: var(--primary-color);
+      width: 100px;
+      height: 1px;
+      border: none;
+    }
 
     h2 {
       margin-block: 30px 42px;
     }
 
     .modal {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      box-sizing: border-box;
       width: 770px;
       height: 450px;
-      display: flex;
-      gap: 54px;
+      border: 1px solid var(--primary-color);
+      box-shadow: 0 10px 40px rgba(0.15, 0.15, 0.15, 0.15);
+      padding: 60px;
+
+      .form {
+        display: flex;
+        margin: 0;
+      }
 
       ul {
         display: flex;
         flex-direction: column;
         gap: 20px;
+
+        li {
+          display: flex;
+          gap: 5px;
+          align-items: baseline;
+
+          svg {
+            height: 15px;
+          }
+
+          span {
+            font-weight: 400;
+            font-size: 18px;
+            color: var(--secondary-color);
+          }
+        }
       }
 
       form {
