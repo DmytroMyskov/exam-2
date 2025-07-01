@@ -135,14 +135,14 @@ body {
       }
     }
 
-    h1 {
+    h5 {
       font-weight: 700;
       font-size: 80px;
       color: var(--third-color);
-      margin-top: 223px;
       white-space: nowrap;
       text-align: center;
       letter-spacing: 0.1em;
+      text-transform: uppercase;
     }
 
     p {
@@ -153,9 +153,10 @@ body {
       letter-spacing: 0.3em;
       margin-top: 20px;
       text-align: center;
+      text-transform: uppercase;
     }
 
-    .btn {
+    .scroll {
       width: 40px;
       height: 40px;
       background-color: transparent;
@@ -170,6 +171,14 @@ body {
       cursor: pointer;
       z-index: 2;
 
+      svg {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 11px;
+      }
+
       &:hover {
         background-color: rgba(255, 255, 255, 0.2);
       }
@@ -183,7 +192,8 @@ body {
       overflow-y: hidden;
       z-index: 2;
       height: 300px;
-      width: 900px;
+      width: 950px;
+      margin-top: 75px;
 
       ul {
         display: flex;
@@ -204,29 +214,34 @@ body {
     .dots {
       position: absolute;
       right: calc(25vw - 285px);
+      bottom: calc(25vh + 125px);
       display: flex;
       gap: 40px;
       flex-direction: column;
       z-index: 2;
 
       li {
-        width: 10px;
-        height: 10px;
+        width: 9px;
+        height: 9px;
         background-color: transparent;
         border: 1px solid var(--third-color);
         border-radius: 50%;
         cursor: pointer;
         transition: background-color 0.3s ease, border-color 0.3s ease;
 
-        &.active,
+        &.active {
+          background-color: var(--third-color);
+          border-color: var(--third-color);
+          transform: scale(1.1);
+        }
+
         &:active {
           background-color: var(--third-color);
         }
 
         &:hover {
           background-color: var(--third-color);
-          transform: scale(1.1);
-
+          border-color: var(--third-color);
         }
       }
     }
@@ -421,8 +436,8 @@ body {
     }
 
     .indicator-dot {
-      width: 10px;
-      height: 10px;
+      width: 9px;
+      height: 9px;
       background-color: transparent;
       border: 1px solid var(--third-color);
       border-radius: 50%;

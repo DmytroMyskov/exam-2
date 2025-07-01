@@ -41,8 +41,6 @@ createIndicators();
 updateCarousel();
 
 function scrollTo(index) {
-  // const slide = document.querySelector(`.content li:nth-child(${index + 1})`);
-  // slide.scrollIntoView({ behavior: 'smooth' });
   heroSlider.scrollTo({
     left: index * heroSlider.offsetWidth,
     behavior: 'smooth'
