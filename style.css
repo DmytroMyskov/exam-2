@@ -90,11 +90,10 @@ body {
             display: flex;
             align-items: center;
             cursor: pointer;
-
-            &:hover {
-              border-bottom: 1px solid var(--third-color);
-              transform: scale(1.1);
-            }
+            display: flex;
+            flex-direction: row;
+            gap: 14px;
+            align-items: center;
 
             a {
               font-family: var(--third-font);
@@ -102,6 +101,27 @@ body {
               font-size: 14px;
               color: var(--third-color);
             }
+          }
+
+          .dot {
+            width: 9px;
+            height: 9px;
+            background-color: transparent;
+            border: 1px solid var(--third-color);
+            border-radius: 50%;
+            cursor: pointer;
+            transition: background-color 0.3s ease, border-color 0.3s ease;
+          }
+
+          .dot.active {
+            background-color: var(--third-color);
+            border-color: var(--third-color);
+            transform: scale(1.1);
+          }
+
+          .dot:hover {
+            background-color: var(--third-color);
+            border-color: var(--third-color);
           }
         }
 

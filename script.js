@@ -5,6 +5,7 @@ const carouselItems = document.querySelectorAll('.carousel-item');
 const prevButton = document.querySelector('.prev-button');
 const nextButton = document.querySelector('.next-button');
 const carouselIndicators = document.querySelector('.carousel-indicators');
+const dots = document.querySelectorAll('.dot');
 
 let currentIndex = 0;
 const totalItems = carouselItems.length;
@@ -35,6 +36,20 @@ nextButton.addEventListener('click', () => {
 prevButton.addEventListener('click', () => {
   currentIndex = (currentIndex - 1 + totalItems) % totalItems;
   updateCarousel();
+});
+
+dots.forEach(dot => {
+  dot.addEventListener('click', () => {
+    dots.forEach(d => {
+      d.classList.remove('active');
+    });
+
+    dot.classList.add('active');
+
+    const clickedIndex = dot.dataset.index;
+    console.log(`Клікнуто на точку з індексом: ${clickedIndex}`);
+    goToSlide(clickedIndex);
+  });
 });
 
 createIndicators();
@@ -78,3 +93,4 @@ function updateCarousel() {
   carouselContent.style.transform = `translateX(${offset}%)`;
   updateIndicators();
 }
+
